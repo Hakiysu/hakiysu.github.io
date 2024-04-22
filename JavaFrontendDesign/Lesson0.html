@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   
   
-  <title>子网划分 | 无名小站</title>
+  <title>Java前端开发-L | 无名小站</title>
   
   <meta name="author" content="Hakiysu" />
   <meta http-equiv="Cache-Control" content="no-transform" />
@@ -15,19 +15,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-    <meta name="keywords" content="子网划分" />
+    <meta name="keywords" content="Java前端开发" />
   
-  <meta name="description" content="子网划分通过借用IP地址的若干位主机位来充当子网地址,从而将原网络划分为若干子网而实现的缺点:从一个IP数据报的首部无法判断源主机或目的主机所连接的网络是否进行了子网划分 子网掩码用于识别ip地址中的主机和网络地址特征:连续的1覆盖,中间如有0存在,则只查看前面的1,后面的0不计算 eg: 两级ip:145.13.3.10,网络号145.13,主机号3.10 三级ip:145.13.3.10,网络">
+  <meta name="description" content="written by Hakiysu">
 <meta property="og:type" content="article">
-<meta property="og:title" content="子网划分">
-<meta property="og:url" content="http://hakiysu.github.io/55ec34752f72/index.html">
+<meta property="og:title" content="Java前端开发-L">
+<meta property="og:url" content="http://hakiysu.github.io/JavaFrontendDesign/Lesson0.html">
 <meta property="og:site_name" content="无名小站">
-<meta property="og:description" content="子网划分通过借用IP地址的若干位主机位来充当子网地址,从而将原网络划分为若干子网而实现的缺点:从一个IP数据报的首部无法判断源主机或目的主机所连接的网络是否进行了子网划分 子网掩码用于识别ip地址中的主机和网络地址特征:连续的1覆盖,中间如有0存在,则只查看前面的1,后面的0不计算 eg: 两级ip:145.13.3.10,网络号145.13,主机号3.10 三级ip:145.13.3.10,网络">
+<meta property="og:description" content="written by Hakiysu">
 <meta property="og:locale">
-<meta property="article:published_time" content="2023-03-09T06:15:16.000Z">
-<meta property="article:modified_time" content="2024-04-22T08:12:45.605Z">
+<meta property="article:published_time" content="2023-03-23T06:15:16.000Z">
+<meta property="article:modified_time" content="2024-04-22T08:08:23.802Z">
 <meta property="article:author" content="Hakiysu">
-<meta property="article:tag" content="子网划分">
+<meta property="article:tag" content="Java前端开发">
 <meta name="twitter:card" content="summary">
   
   <!-- 站点验证相关 -->
@@ -153,15 +153,15 @@
 
             <article itemscope itemtype="https://schema.org/Article">
     
-    <link itemprop="mainEntityOfPage" href="http://hakiysu.github.io/55ec34752f72/">
+    <link itemprop="mainEntityOfPage" href="http://hakiysu.github.io/JavaFrontendDesign/Lesson0.html">
     <div class="kratos-hentry kratos-post-inner clearfix">
         <header class="kratos-entry-header">
             
-                <h1 class="kratos-entry-title text-center" itemprop="name headline">子网划分</h1>
+                <h1 class="kratos-entry-title text-center" itemprop="name headline">Java前端开发-L</h1>
             
             
             <ul class="kratos-post-meta text-center">
-                <li><time datetime="2023-03-09T06:15:16.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2023-03-09</time></li>
+                <li><time datetime="2023-03-23T06:15:16.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2023-03-23</time></li>
                 <li itemprop="author" itemscope itemtype="https://schema.org/Person">
                     <i class="fa fa-user"></i> 作者 <span itemprop="name">Hakiysu</span>
                 </li>
@@ -170,7 +170,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            730
+                            0
                         
                         字
                     </li>
@@ -182,27 +182,13 @@
             
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
                 <div class="icon"><i class="fa fa-warning"></i></div>
-                <div class="text"><p>本文最后编辑于 <time datetime="1713773565605"></time> 前，其中的内容可能需要更新。</p></div>
+                <div class="text"><p>本文最后编辑于 <time datetime="1713773303802"></time> 前，其中的内容可能需要更新。</p></div>
             </div>
             
             
             
             <hr />
-            <div itemprop="articleBody"><p>子网划分<br>通过借用IP地址的若干位主机位来充当子网地址,从而将原网络划分为若干子网而实现的<br>缺点:从一个IP数据报的首部无法判断源主机或目的主机所连接的网络是否进行了子网划分</p>
-<p>子网掩码<br>用于识别ip地址中的主机和网络地址<br>特征:连续的1覆盖,中间如有0存在,则只查看前面的1,后面的0不计算</p>
-<p>eg:</p>
-<p>两级ip:145.13.3.10,网络号145.13,主机号3.10</p>
-<p>三级ip:145.13.3.10,网络号145.13.3,主机号10</p>
-<p>三级ip的子网掩码:11111111 11111111 11111111 00000000</p>
-<p>计算:三级ip和三级ip子网掩码进行与(AND)运算，得此子网的网络地址:145.13.3</p>
-<p>常用表示方法<br>用点分十进制表示法表示子网掩码</p>
-<p>eg:255.255.255.192<br>用二进制表示法表示子网掩码</p>
-<p>eg:11111111 11111111 11111111 11000000<br>网络前缀法:用子网掩码中1的个数表示子网掩码</p>
-<p>eg:138.96.0.0&#x2F;26<br>表示此地址是B类网络138.96.0.0，子网掩码为255.255.0.0<br>默认子网掩码:</p>
-<p>A类:255.0.0.0<br>B类:255.255.0.0<br>C类:255.255.255.0<br>VLSM：变长子网划分法<br>给子网再次分配子网，从而实现网络的划分</p>
-<p>通过将网络划分为若干个子网,并为每个子网分配一个子网掩码,从而实现网络的划分</p>
-<p>优点:可以根据网络的实际情况,灵活地划分子网,从而提高网络的利用率<br>缺点:需要为每个子网分配一个子网掩码,增加了网络的管理工作量<br>适用范围:网络规模较小,网络的拓扑结构较为简单的网络<br>CIDR：无分类域间路由选择法<br>将网络前缀相同的连续IP地址组成CIDR地址块</p>
-</div>
+            <div itemprop="articleBody"></div>
         </div>
         
             <div class="kratos-copyright text-center clearfix">
@@ -255,7 +241,7 @@
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "http://hakiysu.github.io/55ec34752f72/",
+                text: "http://hakiysu.github.io/JavaFrontendDesign/Lesson0.html",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -267,10 +253,9 @@
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "http://hakiysu.github.io/55ec34752f72/";
-            const title         = "「子网划分」";
-            const excerpt       = `子网划分通过借用IP地址的若干位主机位来充当子网地址,从而将原网络划分为若干子网而实现的缺点:从一个IP数据报的首部无法判断源主机或目的主机所连接的网络是否进行了子网划分
-子网掩码用于识别ip地址中的主机和网络地址特征:连续的1覆盖,...`;
+            const hostUrl       = "http://hakiysu.github.io/JavaFrontendDesign/Lesson0.html";
+            const title         = "「Java前端开发-L」";
+            const excerpt       = ``;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -289,10 +274,10 @@
             <div class="footer-tag clearfix">
                 <div class="pull-left">
                 <i class="fa fa-tags"></i>
-                    <a class="tag-none-link" href="/tags/%E5%AD%90%E7%BD%91%E5%88%92%E5%88%86/" rel="tag">子网划分</a>
+                    <a class="tag-none-link" href="/tags/Java%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" rel="tag">Java前端开发</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2024-04-22T08:12:45.605Z" itemprop="dateModified">最后编辑：2024-04-22</time>
+                    <time datetime="2024-04-22T08:08:23.802Z" itemprop="dateModified">最后编辑：2024-04-22</time>
                 </div>
             </div>
         </footer>
@@ -301,12 +286,12 @@
         <nav class="navigation post-navigation clearfix" role="navigation">
             
             <div class="nav-previous clearfix">
-                <a title=" 网络硬件基本介绍" href="/f4b8df5a51da/">&lt; 上一篇</a>
+                <a title=" Java前端开发-L4" href="/JavaFrontendDesign/Lesson4.html">&lt; 上一篇</a>
             </div>
             
             
             <div class="nav-next clearfix">
-                <a title=" 网络设备的控制与管理" href="/46db8798c243/">下一篇 &gt;</a>
+                <a title=" Java前端开发-L3" href="/JavaFrontendDesign/Lesson3.html">下一篇 &gt;</a>
             </div>
             
         </nav>
@@ -388,31 +373,31 @@
         
           
           
-            <a class="list-group-item" href="/1df1a6bee345/"><i class="fa  fa-book"></i> MySQL8.0版本部署</a>
+            <a class="list-group-item" href="/Notebook/deployNewMySQLv8.html"><i class="fa  fa-book"></i> MySQL8.0版本部署</a>
             
           
         
           
           
-            <a class="list-group-item" href="/9ad046aab3bd/"><i class="fa  fa-book"></i> Vue3相关有用信息</a>
+            <a class="list-group-item" href="/Notebook/vue_manual.html"><i class="fa  fa-book"></i> Vue3相关有用信息</a>
             
           
         
           
           
-            <a class="list-group-item" href="/4b125ad86873/"><i class="fa  fa-book"></i> TITLE</a>
+            <a class="list-group-item" href="/SAMPLE.html"><i class="fa  fa-book"></i> TITLE</a>
             
           
         
           
           
-            <a class="list-group-item" href="/252e9077e1a3/"><i class="fa  fa-book"></i> VLAN</a>
+            <a class="list-group-item" href="/NetworkDesign/VLAN.html"><i class="fa  fa-book"></i> VLAN</a>
             
           
         
           
           
-            <a class="list-group-item" href="/89e2f3ab706f/"><i class="fa  fa-book"></i> Java前端开发-L</a>
+            <a class="list-group-item" href="/JavaFrontendDesign/Lesson3.html"><i class="fa  fa-book"></i> Java前端开发-L3</a>
             
           
         

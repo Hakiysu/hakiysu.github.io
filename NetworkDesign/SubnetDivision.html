@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   
   
-  <title>网络基础知识 | 无名小站</title>
+  <title>子网划分 | 无名小站</title>
   
   <meta name="author" content="Hakiysu" />
   <meta http-equiv="Cache-Control" content="no-transform" />
@@ -15,21 +15,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-    <meta name="keywords" content="MySQL, Windows, 随笔小记" />
+    <meta name="keywords" content="子网划分" />
   
-  <meta name="description" content="IP地址因特网看成一个单一的、抽象的网络。IP地址由IETF(因特网工程小组)提出。IP地址就是给每个连接在互联网上的主机分配一个在全世界范围是唯一的32位的标识符(仍是ipv4)。IPv4地址总数&#x3D;2^32≈42亿将ip地址划分为若干个固定类每一类地址都由2个固定长度的字段组成其中一个字段是网络号net-id,它标志主机（或路由器所连接到的网络）。另一个字段则是主机号host-id,它">
+  <meta name="description" content="子网划分通过借用IP地址的若干位主机位来充当子网地址,从而将原网络划分为若干子网而实现的缺点:从一个IP数据报的首部无法判断源主机或目的主机所连接的网络是否进行了子网划分 子网掩码用于识别ip地址中的主机和网络地址特征:连续的1覆盖,中间如有0存在,则只查看前面的1,后面的0不计算 eg: 两级ip:145.13.3.10,网络号145.13,主机号3.10 三级ip:145.13.3.10,网络">
 <meta property="og:type" content="article">
-<meta property="og:title" content="网络基础知识">
-<meta property="og:url" content="http://hakiysu.github.io/0c1abda0be5d/index.html">
+<meta property="og:title" content="子网划分">
+<meta property="og:url" content="http://hakiysu.github.io/NetworkDesign/SubnetDivision.html">
 <meta property="og:site_name" content="无名小站">
-<meta property="og:description" content="IP地址因特网看成一个单一的、抽象的网络。IP地址由IETF(因特网工程小组)提出。IP地址就是给每个连接在互联网上的主机分配一个在全世界范围是唯一的32位的标识符(仍是ipv4)。IPv4地址总数&#x3D;2^32≈42亿将ip地址划分为若干个固定类每一类地址都由2个固定长度的字段组成其中一个字段是网络号net-id,它标志主机（或路由器所连接到的网络）。另一个字段则是主机号host-id,它">
+<meta property="og:description" content="子网划分通过借用IP地址的若干位主机位来充当子网地址,从而将原网络划分为若干子网而实现的缺点:从一个IP数据报的首部无法判断源主机或目的主机所连接的网络是否进行了子网划分 子网掩码用于识别ip地址中的主机和网络地址特征:连续的1覆盖,中间如有0存在,则只查看前面的1,后面的0不计算 eg: 两级ip:145.13.3.10,网络号145.13,主机号3.10 三级ip:145.13.3.10,网络">
 <meta property="og:locale">
-<meta property="article:published_time" content="2023-03-16T06:54:59.000Z">
-<meta property="article:modified_time" content="2024-04-22T08:03:16.032Z">
+<meta property="article:published_time" content="2023-03-09T06:15:16.000Z">
+<meta property="article:modified_time" content="2024-04-22T08:12:45.605Z">
 <meta property="article:author" content="Hakiysu">
-<meta property="article:tag" content="MySQL">
-<meta property="article:tag" content="Windows">
-<meta property="article:tag" content="随笔小记">
+<meta property="article:tag" content="子网划分">
 <meta name="twitter:card" content="summary">
   
   <!-- 站点验证相关 -->
@@ -155,15 +153,15 @@
 
             <article itemscope itemtype="https://schema.org/Article">
     
-    <link itemprop="mainEntityOfPage" href="http://hakiysu.github.io/0c1abda0be5d/">
+    <link itemprop="mainEntityOfPage" href="http://hakiysu.github.io/NetworkDesign/SubnetDivision.html">
     <div class="kratos-hentry kratos-post-inner clearfix">
         <header class="kratos-entry-header">
             
-                <h1 class="kratos-entry-title text-center" itemprop="name headline">网络基础知识</h1>
+                <h1 class="kratos-entry-title text-center" itemprop="name headline">子网划分</h1>
             
             
             <ul class="kratos-post-meta text-center">
-                <li><time datetime="2023-03-16T06:54:59.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2023-03-16</time></li>
+                <li><time datetime="2023-03-09T06:15:16.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2023-03-09</time></li>
                 <li itemprop="author" itemscope itemtype="https://schema.org/Person">
                     <i class="fa fa-user"></i> 作者 <span itemprop="name">Hakiysu</span>
                 </li>
@@ -172,7 +170,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            986
+                            730
                         
                         字
                     </li>
@@ -184,20 +182,26 @@
             
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
                 <div class="icon"><i class="fa fa-warning"></i></div>
-                <div class="text"><p>本文最后编辑于 <time datetime="1713772996032"></time> 前，其中的内容可能需要更新。</p></div>
+                <div class="text"><p>本文最后编辑于 <time datetime="1713773565605"></time> 前，其中的内容可能需要更新。</p></div>
             </div>
             
             
             
             <hr />
-            <div itemprop="articleBody"><p>IP地址<br>因特网看成一个单一的、抽象的网络。<br>IP地址由IETF(因特网工程小组)提出。<br>IP地址就是给每个连接在互联网上的主机分配一个在全世界范围是唯一的32位的标识符(仍是ipv4)。<br>IPv4地址总数&#x3D;2^32≈42亿<br>将ip地址划分为若干个固定类<br>每一类地址都由2个固定长度的字段组成<br>其中一个字段是网络号net-id,它标志主机（或路由器所连接到的网络）。<br>另一个字段则是主机号host-id,它标志该主机（或路由器）。</p>
-<p>地址分类<br>地址类型	网络号	主机号	网络数	主机数	网络地址范围	备注<br>A类地址	8位	24位	2^7&#x3D;128	2^24-2&#x3D;16777214	用于大型网络	<br>B类地址	16位	16位	2^14&#x3D;16384	2^16-2&#x3D;65534	用于中型网络	<br>C类地址	24位	8位	2^21&#x3D;2097152	2^8-2&#x3D;254	用于小型网络,本学期使用此类地址	<br>D类地址	28位	4位	2^28&#x3D;268435456	2^4&#x3D;16	用于多播地址	<br>E类地址	28位	4位	2^28&#x3D;268435456	2^4&#x3D;16	作为保留地址	<br>点分十进制记法：<br>机器的32位二进制代码IP转换为10进制ip</p>
-<p>例子：11000000 00000101 00110000 00000011</p>
-<p>换算后为192.5.48.3</p>
-<p>一些特殊的保留地址（主机部分&#x3D;host部分）<br>注意：保留地址指某些地址不能分配给网络上的设备使用。</p>
-<p>网络地址：主机部分全0，即十进制0，eg:192.168.100.0&#x2F;24<br>广播地址：主机部分全1，即十进制255，eg:192.168.100.255&#x2F;24<br>缺省路由：全0的ip地址，即十进制0，eg:0.0.0.0<br>泛洪地址：全1的ip地址，即十进制255，eg:255.255.255.255<br>环回地址：127.0.0.1</p>
-<hr>
-<p>该内容采用 CC BY-NC-SA 4.0 许可协议，著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。<br>作者：Hakiysu<br>来源：网络基础知识 | 无名小站<br>链接：<a href="https://hakiysu.github.io/NetworkDesign/NetworkBasicKnowledge.html">https://hakiysu.github.io/NetworkDesign/NetworkBasicKnowledge.html</a></p>
+            <div itemprop="articleBody"><p>子网划分<br>通过借用IP地址的若干位主机位来充当子网地址,从而将原网络划分为若干子网而实现的<br>缺点:从一个IP数据报的首部无法判断源主机或目的主机所连接的网络是否进行了子网划分</p>
+<p>子网掩码<br>用于识别ip地址中的主机和网络地址<br>特征:连续的1覆盖,中间如有0存在,则只查看前面的1,后面的0不计算</p>
+<p>eg:</p>
+<p>两级ip:145.13.3.10,网络号145.13,主机号3.10</p>
+<p>三级ip:145.13.3.10,网络号145.13.3,主机号10</p>
+<p>三级ip的子网掩码:11111111 11111111 11111111 00000000</p>
+<p>计算:三级ip和三级ip子网掩码进行与(AND)运算，得此子网的网络地址:145.13.3</p>
+<p>常用表示方法<br>用点分十进制表示法表示子网掩码</p>
+<p>eg:255.255.255.192<br>用二进制表示法表示子网掩码</p>
+<p>eg:11111111 11111111 11111111 11000000<br>网络前缀法:用子网掩码中1的个数表示子网掩码</p>
+<p>eg:138.96.0.0&#x2F;26<br>表示此地址是B类网络138.96.0.0，子网掩码为255.255.0.0<br>默认子网掩码:</p>
+<p>A类:255.0.0.0<br>B类:255.255.0.0<br>C类:255.255.255.0<br>VLSM：变长子网划分法<br>给子网再次分配子网，从而实现网络的划分</p>
+<p>通过将网络划分为若干个子网,并为每个子网分配一个子网掩码,从而实现网络的划分</p>
+<p>优点:可以根据网络的实际情况,灵活地划分子网,从而提高网络的利用率<br>缺点:需要为每个子网分配一个子网掩码,增加了网络的管理工作量<br>适用范围:网络规模较小,网络的拓扑结构较为简单的网络<br>CIDR：无分类域间路由选择法<br>将网络前缀相同的连续IP地址组成CIDR地址块</p>
 </div>
         </div>
         
@@ -251,7 +255,7 @@
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "http://hakiysu.github.io/0c1abda0be5d/",
+                text: "http://hakiysu.github.io/NetworkDesign/SubnetDivision.html",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -263,9 +267,10 @@
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "http://hakiysu.github.io/0c1abda0be5d/";
-            const title         = "「网络基础知识」";
-            const excerpt       = `IP地址因特网看成一个单一的、抽象的网络。IP地址由IETF(因特网工程小组)提出。IP地址就是给每个连接在互联网上的主机分配一个在全世界范围是唯一的32位的标识符(仍是ipv4)。IPv4地址总数&#x3D;2^32≈42亿将ip地...`;
+            const hostUrl       = "http://hakiysu.github.io/NetworkDesign/SubnetDivision.html";
+            const title         = "「子网划分」";
+            const excerpt       = `子网划分通过借用IP地址的若干位主机位来充当子网地址,从而将原网络划分为若干子网而实现的缺点:从一个IP数据报的首部无法判断源主机或目的主机所连接的网络是否进行了子网划分
+子网掩码用于识别ip地址中的主机和网络地址特征:连续的1覆盖,...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -284,10 +289,10 @@
             <div class="footer-tag clearfix">
                 <div class="pull-left">
                 <i class="fa fa-tags"></i>
-                    <a class="tag-none-link" href="/tags/MySQL/" rel="tag">MySQL</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>, <a class="tag-none-link" href="/tags/%E9%9A%8F%E7%AC%94%E5%B0%8F%E8%AE%B0/" rel="tag">随笔小记</a>
+                    <a class="tag-none-link" href="/tags/%E5%AD%90%E7%BD%91%E5%88%92%E5%88%86/" rel="tag">子网划分</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2024-04-22T08:03:16.032Z" itemprop="dateModified">最后编辑：2024-04-22</time>
+                    <time datetime="2024-04-22T08:12:45.605Z" itemprop="dateModified">最后编辑：2024-04-22</time>
                 </div>
             </div>
         </footer>
@@ -295,13 +300,9 @@
     
         <nav class="navigation post-navigation clearfix" role="navigation">
             
-            <div class="nav-previous clearfix">
-                <a title=" 网络设备的控制与管理" href="/46db8798c243/">&lt; 上一篇</a>
-            </div>
-            
             
             <div class="nav-next clearfix">
-                <a title=" Java前端开发-L4" href="/3995f7755693/">下一篇 &gt;</a>
+                <a title=" 网络硬件基本介绍" href="/NetworkDesign/Introduction.html">下一篇 &gt;</a>
             </div>
             
         </nav>
@@ -383,31 +384,31 @@
         
           
           
-            <a class="list-group-item" href="/1df1a6bee345/"><i class="fa  fa-book"></i> MySQL8.0版本部署</a>
+            <a class="list-group-item" href="/Notebook/deployNewMySQLv8.html"><i class="fa  fa-book"></i> MySQL8.0版本部署</a>
             
           
         
           
           
-            <a class="list-group-item" href="/9ad046aab3bd/"><i class="fa  fa-book"></i> Vue3相关有用信息</a>
+            <a class="list-group-item" href="/Notebook/vue_manual.html"><i class="fa  fa-book"></i> Vue3相关有用信息</a>
             
           
         
           
           
-            <a class="list-group-item" href="/4b125ad86873/"><i class="fa  fa-book"></i> TITLE</a>
+            <a class="list-group-item" href="/SAMPLE.html"><i class="fa  fa-book"></i> TITLE</a>
             
           
         
           
           
-            <a class="list-group-item" href="/252e9077e1a3/"><i class="fa  fa-book"></i> VLAN</a>
+            <a class="list-group-item" href="/NetworkDesign/VLAN.html"><i class="fa  fa-book"></i> VLAN</a>
             
           
         
           
           
-            <a class="list-group-item" href="/89e2f3ab706f/"><i class="fa  fa-book"></i> Java前端开发-L</a>
+            <a class="list-group-item" href="/JavaFrontendDesign/Lesson3.html"><i class="fa  fa-book"></i> Java前端开发-L3</a>
             
           
         

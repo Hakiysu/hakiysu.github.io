@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   
   
-  <title>MySQL8.0版本部署 | 无名小站</title>
+  <title>Java前端开发-L5 | 无名小站</title>
   
   <meta name="author" content="Hakiysu" />
   <meta http-equiv="Cache-Control" content="no-transform" />
@@ -15,21 +15,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-    <meta name="keywords" content="MySQL, Windows, 随笔小记" />
+    <meta name="keywords" content="CSS, Java前端开发" />
   
-  <meta name="description" content="MySQL8.0版本部署 本文主要记录MySQL8.0版本的部署过程，以及遇到的问题和解决方案。 压缩包下载地址：MySQL8.0.25 部署步骤 解压压缩包到指定目录 尽量不要放在C盘，因为C盘可能会有权限问题 目录名中不要有空格和中文名称   配置环境变量 自己上网搜   编写my.ini文件   3.初始化数据库 使用管理员身份打开cmd(排除一些权限问题) 输入以下命令来初始化数据库，运行">
+  <meta name="description" content="CSS语法css由选择器selector，属性property，值组成value。selector{property:value}选择器（selector）是指给页面的哪个或哪些元素定义样式，通常是希望定义样式的元素标签。属性（property）是定义的具体样式（如颜色、字体等），每个属性都有一个值，属性和值用冒号隔开，并用大括号括起来。 属性和值组成样式声明（declaration），可以定义多">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MySQL8.0版本部署">
-<meta property="og:url" content="http://hakiysu.github.io/1df1a6bee345/index.html">
+<meta property="og:title" content="Java前端开发-L5">
+<meta property="og:url" content="http://hakiysu.github.io/JavaFrontendDesign/Lesson5.html">
 <meta property="og:site_name" content="无名小站">
-<meta property="og:description" content="MySQL8.0版本部署 本文主要记录MySQL8.0版本的部署过程，以及遇到的问题和解决方案。 压缩包下载地址：MySQL8.0.25 部署步骤 解压压缩包到指定目录 尽量不要放在C盘，因为C盘可能会有权限问题 目录名中不要有空格和中文名称   配置环境变量 自己上网搜   编写my.ini文件   3.初始化数据库 使用管理员身份打开cmd(排除一些权限问题) 输入以下命令来初始化数据库，运行">
+<meta property="og:description" content="CSS语法css由选择器selector，属性property，值组成value。selector{property:value}选择器（selector）是指给页面的哪个或哪些元素定义样式，通常是希望定义样式的元素标签。属性（property）是定义的具体样式（如颜色、字体等），每个属性都有一个值，属性和值用冒号隔开，并用大括号括起来。 属性和值组成样式声明（declaration），可以定义多">
 <meta property="og:locale">
-<meta property="article:published_time" content="2023-06-28T11:54:59.000Z">
-<meta property="article:modified_time" content="2023-06-28T15:35:10.378Z">
+<meta property="article:published_time" content="2023-03-23T06:15:16.000Z">
+<meta property="article:modified_time" content="2024-04-22T08:09:30.151Z">
 <meta property="article:author" content="Hakiysu">
-<meta property="article:tag" content="MySQL">
-<meta property="article:tag" content="Windows">
-<meta property="article:tag" content="随笔小记">
+<meta property="article:tag" content="Java前端开发">
+<meta property="article:tag" content="CSS">
 <meta name="twitter:card" content="summary">
   
   <!-- 站点验证相关 -->
@@ -155,15 +154,15 @@
 
             <article itemscope itemtype="https://schema.org/Article">
     
-    <link itemprop="mainEntityOfPage" href="http://hakiysu.github.io/1df1a6bee345/">
+    <link itemprop="mainEntityOfPage" href="http://hakiysu.github.io/JavaFrontendDesign/Lesson5.html">
     <div class="kratos-hentry kratos-post-inner clearfix">
         <header class="kratos-entry-header">
             
-                <h1 class="kratos-entry-title text-center" itemprop="name headline">MySQL8.0版本部署</h1>
+                <h1 class="kratos-entry-title text-center" itemprop="name headline">Java前端开发-L5</h1>
             
             
             <ul class="kratos-post-meta text-center">
-                <li><time datetime="2023-06-28T11:54:59.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2023-06-28</time></li>
+                <li><time datetime="2023-03-23T06:15:16.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2023-03-23</time></li>
                 <li itemprop="author" itemscope itemtype="https://schema.org/Person">
                     <i class="fa fa-user"></i> 作者 <span itemprop="name">Hakiysu</span>
                 </li>
@@ -172,7 +171,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            859
+                            455
                         
                         字
                     </li>
@@ -184,66 +183,16 @@
             
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
                 <div class="icon"><i class="fa fa-warning"></i></div>
-                <div class="text"><p>本文最后编辑于 <time datetime="1687966510378"></time> 前，其中的内容可能需要更新。</p></div>
+                <div class="text"><p>本文最后编辑于 <time datetime="1713773370151"></time> 前，其中的内容可能需要更新。</p></div>
             </div>
             
             
             
             <hr />
-            <div itemprop="articleBody"><h1 id="MySQL8-0版本部署"><a href="#MySQL8-0版本部署" class="headerlink" title="MySQL8.0版本部署"></a>MySQL8.0版本部署</h1><ul>
-<li>本文主要记录MySQL8.0版本的部署过程，以及遇到的问题和解决方案。</li>
-<li>压缩包下载地址：<a target="_blank" rel="noopener" href="https://dev.mysql.com/downloads/mysql/8.0.html#downloads">MySQL8.0.25</a></li>
-<li>部署步骤<ol>
-<li>解压压缩包到指定目录<ol>
-<li>尽量不要放在C盘，因为C盘可能会有权限问题</li>
-<li>目录名中不要有空格和中文名称</li>
-</ol>
-</li>
-<li>配置环境变量<ul>
-<li>自己上网搜</li>
-</ul>
-</li>
-<li>编写my.ini文件</li>
-</ol>
-</li>
-<li>3.初始化数据库<ul>
-<li>使用管理员身份打开cmd(排除一些权限问题)</li>
-<li>输入以下命令来初始化数据库，运行完成后会生成一个临时密码，复制下来，后面会用到</li>
-<li>默认用户名为root<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld --initialize --console</span><br></pre></td></tr></table></figure></li>
-<li>输入以下命令来安装MySQL服务(服务名为MySQL，可以自己改)<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld install MySQL</span><br></pre></td></tr></table></figure>
-<ul>
-<li>输入以下命令来启动MySQL服务  <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">net</span> <span class="built_in">start</span> MySQL</span><br></pre></td></tr></table></figure></li>
-<li>输入以下命令来停止MySQL服务  <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">net</span> stop MySQL</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li>修改MySQL的默认root密码<ul>
-<li>使用管理员身份打开cmd，输入以下命令<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure></li>
-<li>输入刚才复制的临时密码，然后回车</li>
-<li>成功进入MySQL后，输入以下命令来修改密码  <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER USER &#x27;root&#x27;@&#x27;localhost&#x27; IDENTIFIED BY &#x27;新密码&#x27;;</span><br></pre></td></tr></table></figure></li>
-<li>退出MySQL  <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>部署时可能遇到的问题<ol>
-<li>安装MySQL服务时报错<ul>
-<li>问题描述：安装MySQL服务时报错，提示“服务名无效”</li>
-<li>解决方案：检查是否有重复的服务名，如果有，先删除重复的服务名，再重新安装MySQL服务</li>
-</ul>
-</li>
-<li>启动MySQL服务时报错<ul>
-<li>问题描述：启动MySQL服务时报错，提示“系统找不到指定的文件”</li>
-<li>解决方案：检查是否有重复的服务名，如果有，先删除重复的服务名，再重新安装MySQL服务</li>
-</ul>
-</li>
-<li>登录MySQL时报错<ul>
-<li>问题描述：登录密码错误，显示Access deny</li>
-<li>解决方案：MySQL8.0版本的密码加密方式发生了变化，需要修改密码加密方式</li>
-</ul>
-</li>
-</ol>
-</li>
-</ul>
+            <div itemprop="articleBody"><p>CSS语法<br>css由选择器selector，属性property，值组成value。selector{property:value}<br>选择器（selector）是指给页面的哪个或哪些元素定义样式，通常是希望定义样式的元素标签。<br>属性（property）是定义的具体样式（如颜色、字体等），每个属性都有一个值，属性和值用冒号隔开，并用大括号括起来。</p>
+<p>属性和值组成样式声明（declaration），可以定义多个声明，多个声明之间用分号隔开<br>是否包含空格不影响css在浏览器中效果，大小写不敏感，但是建议使用小写。<br>如有多个声明，建议每行只写一个声明。（增强样式的可读性）<br>重要的选择器：类型选择器，ID选择器，类选择器。</p>
+<hr>
+<p>该内容采用 CC BY-NC-SA 4.0 许可协议，著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。<br>作者：Hakiysu<br>来源：Java前端开发-L5 | 无名小站<br>链接：<a href="https://hakiysu.github.io/JavaFrontEndDesign/les5.html">https://hakiysu.github.io/JavaFrontEndDesign/les5.html</a></p>
 </div>
         </div>
         
@@ -297,7 +246,7 @@
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "http://hakiysu.github.io/1df1a6bee345/",
+                text: "http://hakiysu.github.io/JavaFrontendDesign/Lesson5.html",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -309,15 +258,9 @@
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "http://hakiysu.github.io/1df1a6bee345/";
-            const title         = "「MySQL8.0版本部署」";
-            const excerpt       = `MySQL8.0版本部署
-本文主要记录MySQL8.0版本的部署过程，以及遇到的问题和解决方案。
-压缩包下载地址：MySQL8.0.25
-部署步骤
-解压压缩包到指定目录
-尽量不要放在C盘，因为C盘可能会有权限问题
-目录名中不要有空格和...`;
+            const hostUrl       = "http://hakiysu.github.io/JavaFrontendDesign/Lesson5.html";
+            const title         = "「Java前端开发-L5」";
+            const excerpt       = `CSS语法css由选择器selector，属性property，值组成value。selector{property:value}选择器（selector）是指给页面的哪个或哪些元素定义样式，通常是希望定义样式的元素标签。属性（pro...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -336,10 +279,10 @@
             <div class="footer-tag clearfix">
                 <div class="pull-left">
                 <i class="fa fa-tags"></i>
-                    <a class="tag-none-link" href="/tags/MySQL/" rel="tag">MySQL</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>, <a class="tag-none-link" href="/tags/%E9%9A%8F%E7%AC%94%E5%B0%8F%E8%AE%B0/" rel="tag">随笔小记</a>
+                    <a class="tag-none-link" href="/tags/CSS/" rel="tag">CSS</a>, <a class="tag-none-link" href="/tags/Java%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" rel="tag">Java前端开发</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2023-06-28T15:35:10.378Z" itemprop="dateModified">最后编辑：2023-06-28</time>
+                    <time datetime="2024-04-22T08:09:30.151Z" itemprop="dateModified">最后编辑：2024-04-22</time>
                 </div>
             </div>
         </footer>
@@ -348,9 +291,13 @@
         <nav class="navigation post-navigation clearfix" role="navigation">
             
             <div class="nav-previous clearfix">
-                <a title=" Vue3相关有用信息" href="/9ad046aab3bd/">&lt; 上一篇</a>
+                <a title=" 网络基础知识" href="/NetworkDesign/NetworkBasicKnowledge.html">&lt; 上一篇</a>
             </div>
             
+            
+            <div class="nav-next clearfix">
+                <a title=" Java前端开发-L4" href="/JavaFrontendDesign/Lesson4.html">下一篇 &gt;</a>
+            </div>
             
         </nav>
     
@@ -431,31 +378,31 @@
         
           
           
-            <a class="list-group-item" href="/1df1a6bee345/"><i class="fa  fa-book"></i> MySQL8.0版本部署</a>
+            <a class="list-group-item" href="/Notebook/deployNewMySQLv8.html"><i class="fa  fa-book"></i> MySQL8.0版本部署</a>
             
           
         
           
           
-            <a class="list-group-item" href="/9ad046aab3bd/"><i class="fa  fa-book"></i> Vue3相关有用信息</a>
+            <a class="list-group-item" href="/Notebook/vue_manual.html"><i class="fa  fa-book"></i> Vue3相关有用信息</a>
             
           
         
           
           
-            <a class="list-group-item" href="/4b125ad86873/"><i class="fa  fa-book"></i> TITLE</a>
+            <a class="list-group-item" href="/SAMPLE.html"><i class="fa  fa-book"></i> TITLE</a>
             
           
         
           
           
-            <a class="list-group-item" href="/252e9077e1a3/"><i class="fa  fa-book"></i> VLAN</a>
+            <a class="list-group-item" href="/NetworkDesign/VLAN.html"><i class="fa  fa-book"></i> VLAN</a>
             
           
         
           
           
-            <a class="list-group-item" href="/89e2f3ab706f/"><i class="fa  fa-book"></i> Java前端开发-L</a>
+            <a class="list-group-item" href="/JavaFrontendDesign/Lesson3.html"><i class="fa  fa-book"></i> Java前端开发-L3</a>
             
           
         

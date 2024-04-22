@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   
   
-  <title>Java前端开发-L | 无名小站</title>
+  <title>Vue3相关有用信息 | 无名小站</title>
   
   <meta name="author" content="Hakiysu" />
   <meta http-equiv="Cache-Control" content="no-transform" />
@@ -15,19 +15,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-    <meta name="keywords" content="Java前端开发" />
+    <meta name="keywords" content="Vue, 前端" />
   
-  <meta name="description" content="written by Hakiysu">
+  <meta name="description" content="模板语法文本插值​ 最基本的数据绑定形式是文本插值，它使用的是”Mustache”语法 (即双大括号)：  1&lt;span&gt;Message: &amp;#123;&amp;#123; msg &amp;#125;&amp;#125;&lt;&#x2F;span&gt; 双大括号标签会被替换为相应组件实例中 msg 属性的值。同时每次 msg 属性更改时它也会同步更新。  Attribute 绑定 双大括号不能在 HTML att">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java前端开发-L">
-<meta property="og:url" content="http://hakiysu.github.io/89e2f3ab706f/index.html">
+<meta property="og:title" content="Vue3相关有用信息">
+<meta property="og:url" content="http://hakiysu.github.io/Notebook/vue_manual.html">
 <meta property="og:site_name" content="无名小站">
-<meta property="og:description" content="written by Hakiysu">
+<meta property="og:description" content="模板语法文本插值​ 最基本的数据绑定形式是文本插值，它使用的是”Mustache”语法 (即双大括号)：  1&lt;span&gt;Message: &amp;#123;&amp;#123; msg &amp;#125;&amp;#125;&lt;&#x2F;span&gt; 双大括号标签会被替换为相应组件实例中 msg 属性的值。同时每次 msg 属性更改时它也会同步更新。  Attribute 绑定 双大括号不能在 HTML att">
 <meta property="og:locale">
-<meta property="article:published_time" content="2023-03-23T06:15:16.000Z">
-<meta property="article:modified_time" content="2024-04-22T08:08:23.802Z">
+<meta property="article:published_time" content="2023-06-12T03:03:59.000Z">
+<meta property="article:modified_time" content="2024-04-22T08:05:47.421Z">
 <meta property="article:author" content="Hakiysu">
-<meta property="article:tag" content="Java前端开发">
+<meta property="article:tag" content="Vue">
+<meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
   
   <!-- 站点验证相关 -->
@@ -153,15 +154,15 @@
 
             <article itemscope itemtype="https://schema.org/Article">
     
-    <link itemprop="mainEntityOfPage" href="http://hakiysu.github.io/89e2f3ab706f/">
+    <link itemprop="mainEntityOfPage" href="http://hakiysu.github.io/Notebook/vue_manual.html">
     <div class="kratos-hentry kratos-post-inner clearfix">
         <header class="kratos-entry-header">
             
-                <h1 class="kratos-entry-title text-center" itemprop="name headline">Java前端开发-L</h1>
+                <h1 class="kratos-entry-title text-center" itemprop="name headline">Vue3相关有用信息</h1>
             
             
             <ul class="kratos-post-meta text-center">
-                <li><time datetime="2023-03-23T06:15:16.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2023-03-23</time></li>
+                <li><time datetime="2023-06-12T03:03:59.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2023-06-12</time></li>
                 <li itemprop="author" itemscope itemtype="https://schema.org/Person">
                     <i class="fa fa-user"></i> 作者 <span itemprop="name">Hakiysu</span>
                 </li>
@@ -170,7 +171,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            0
+                            907
                         
                         字
                     </li>
@@ -182,13 +183,21 @@
             
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
                 <div class="icon"><i class="fa fa-warning"></i></div>
-                <div class="text"><p>本文最后编辑于 <time datetime="1713773303802"></time> 前，其中的内容可能需要更新。</p></div>
+                <div class="text"><p>本文最后编辑于 <time datetime="1713773147421"></time> 前，其中的内容可能需要更新。</p></div>
             </div>
             
             
             
             <hr />
-            <div itemprop="articleBody"></div>
+            <div itemprop="articleBody"><h1 id="模板语法"><a href="#模板语法" class="headerlink" title="模板语法"></a>模板语法</h1><h2 id="文本插值​"><a href="#文本插值​" class="headerlink" title="文本插值​"></a>文本插值​</h2><ul>
+<li>最基本的数据绑定形式是文本插值，它使用的是”Mustache”语法 (即双大括号)：  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>Message: &#123;&#123; msg &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>双大括号标签会被替换为相应组件实例中 msg 属性的值。同时每次 msg 属性更改时它也会同步更新。</li>
+</ul>
+<h2 id="Attribute-绑定"><a href="#Attribute-绑定" class="headerlink" title="Attribute 绑定"></a>Attribute 绑定</h2><ul>
+<li>双大括号不能在 HTML attributes 中使用。想要响应式地绑定一个 attribute，应该使用 v-bind 指令：  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">setup</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">import</span> &#123; ref &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">const</span> titleClass = <span class="title function_">ref</span>(<span class="string">&#x27;title&#x27;</span>)</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- </span></span><br><span class="line"><span class="comment">        h1中:class=&quot;titleClass&quot;指向script中的const titleClass = ref(&#x27;title&#x27;)</span></span><br><span class="line"><span class="comment">        进而指向css中的.title</span></span><br><span class="line"><span class="comment">    --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">:class</span>=<span class="string">&quot;titleClass&quot;</span>&gt;</span>Make me red<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">    div v-bind:id=&quot;dynamicId&quot;</span></span><br><span class="line"><span class="comment">    可以简写为</span></span><br><span class="line"><span class="comment">    div :id=&quot;dynamicId&quot;</span></span><br><span class="line"><span class="comment">    --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css"><span class="selector-class">.title</span> &#123;</span></span><br><span class="line"><span class="language-css"><span class="attribute">color</span>: red;</span></span><br><span class="line"><span class="language-css">&#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>v-bind 指令指示 Vue 将元素的 id attribute 与组件的 dynamicId 属性保持一致。如果绑定的值是 null 或者 undefined，那么该 attribute 将会从渲染的元素上移除。</li>
+</ul>
+</div>
         </div>
         
             <div class="kratos-copyright text-center clearfix">
@@ -241,7 +250,7 @@
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "http://hakiysu.github.io/89e2f3ab706f/",
+                text: "http://hakiysu.github.io/Notebook/vue_manual.html",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -253,9 +262,10 @@
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "http://hakiysu.github.io/89e2f3ab706f/";
-            const title         = "「Java前端开发-L」";
-            const excerpt       = ``;
+            const hostUrl       = "http://hakiysu.github.io/Notebook/vue_manual.html";
+            const title         = "「Vue3相关有用信息」";
+            const excerpt       = `模板语法文本插值​
+最基本的数据绑定形式是文本插值，它使用的是”Mustache”语法 (即双大括号)：  1&lt;span&gt;Message: &#123;&#123; msg &#125;&#125;&lt;/span&gt...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -274,10 +284,10 @@
             <div class="footer-tag clearfix">
                 <div class="pull-left">
                 <i class="fa fa-tags"></i>
-                    <a class="tag-none-link" href="/tags/Java%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" rel="tag">Java前端开发</a>
+                    <a class="tag-none-link" href="/tags/Vue/" rel="tag">Vue</a>, <a class="tag-none-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2024-04-22T08:08:23.802Z" itemprop="dateModified">最后编辑：2024-04-22</time>
+                    <time datetime="2024-04-22T08:05:47.421Z" itemprop="dateModified">最后编辑：2024-04-22</time>
                 </div>
             </div>
         </footer>
@@ -286,12 +296,12 @@
         <nav class="navigation post-navigation clearfix" role="navigation">
             
             <div class="nav-previous clearfix">
-                <a title=" Java前端开发-L3" href="/c26107c453cb/">&lt; 上一篇</a>
+                <a title=" TITLE" href="/SAMPLE.html">&lt; 上一篇</a>
             </div>
             
             
             <div class="nav-next clearfix">
-                <a title=" VLAN" href="/252e9077e1a3/">下一篇 &gt;</a>
+                <a title=" MySQL8.0版本部署" href="/Notebook/deployNewMySQLv8.html">下一篇 &gt;</a>
             </div>
             
         </nav>
@@ -373,31 +383,31 @@
         
           
           
-            <a class="list-group-item" href="/1df1a6bee345/"><i class="fa  fa-book"></i> MySQL8.0版本部署</a>
+            <a class="list-group-item" href="/Notebook/deployNewMySQLv8.html"><i class="fa  fa-book"></i> MySQL8.0版本部署</a>
             
           
         
           
           
-            <a class="list-group-item" href="/9ad046aab3bd/"><i class="fa  fa-book"></i> Vue3相关有用信息</a>
+            <a class="list-group-item" href="/Notebook/vue_manual.html"><i class="fa  fa-book"></i> Vue3相关有用信息</a>
             
           
         
           
           
-            <a class="list-group-item" href="/4b125ad86873/"><i class="fa  fa-book"></i> TITLE</a>
+            <a class="list-group-item" href="/SAMPLE.html"><i class="fa  fa-book"></i> TITLE</a>
             
           
         
           
           
-            <a class="list-group-item" href="/252e9077e1a3/"><i class="fa  fa-book"></i> VLAN</a>
+            <a class="list-group-item" href="/NetworkDesign/VLAN.html"><i class="fa  fa-book"></i> VLAN</a>
             
           
         
           
           
-            <a class="list-group-item" href="/89e2f3ab706f/"><i class="fa  fa-book"></i> Java前端开发-L</a>
+            <a class="list-group-item" href="/JavaFrontendDesign/Lesson3.html"><i class="fa  fa-book"></i> Java前端开发-L3</a>
             
           
         
